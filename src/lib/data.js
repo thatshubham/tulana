@@ -33,24 +33,34 @@ export const countryData = [
 	},
 
 	{
+		name: 'Global Coffee Market (Value)',
+		budget: 285e9,
+		type: 'Historic'
+	},
+	{
+		name: 'Global Video Game Market (Value)',
+		budget: 560e9,
+		type: 'Historic'
+	},
+
+	{
 		name: 'Kashagan Oil Field - The most expensive offshore oil project',
 		budget: 116e9,
 		type: 'Historic',
 		isInflationAdjusted: true
 	},
-		{
+	{
 		name: 'Rio Olympic Games (Summer 2016)',
 		budget: 20e9,
 		type: 'Historic',
 		isInflationAdjusted: true
 	},
-		{
+	{
 		name: 'FIFA World Cup in Qatar (2022)',
 		budget: 220e9,
 		type: 'Historic',
 		isInflationAdjusted: true
 	},
-
 
 	{
 		name: 'Panama Canal (Construction)',
@@ -58,7 +68,6 @@ export const countryData = [
 		type: 'Historic',
 		isInflationAdjusted: true
 	},
-
 
 	// NATIONAL DEPARTMENTS
 	{
@@ -83,6 +92,11 @@ export const countryData = [
 		name: 'End World Hunger (Yearly)',
 		budget: 93e9,
 		/* https://news.un.org/en/story/2025/11/1166397 */ type: 'Global Goal'
+	},
+	{
+		name: 'Universal Access to Safe Water & Sanitation (yearly budget)',
+		budget: 140e9,
+		type: 'Global Goal'
 	},
 
 	// INFRA
@@ -178,27 +192,27 @@ export const countryData = [
 		budget: 107e9,
 		type: 'Country (Budget Expenditure)'
 	},
-    {
+	{
 		name: 'Sweden',
 		budget: 164e9,
 		type: 'Country (Budget Expenditure)'
 	},
-    {
+	{
 		name: 'Austria',
 		budget: 123e9,
 		type: 'Country (Budget Expenditure)'
 	},
-    {
+	{
 		name: 'Indonesia',
 		budget: 236e9,
 		type: 'Country (Budget Expenditure)'
 	},
-    {
+	{
 		name: 'Norway',
 		budget: 200e9,
 		type: 'Country (Budget Expenditure)'
 	},
-    {
+	{
 		name: 'India',
 		budget: 650e9,
 		type: 'Country (Budget Expenditure)'
