@@ -1,4 +1,21 @@
-<script>
+<svelte:head>
+	<title>Tulana | Compare Big Tech AI Spending versus World Budgets</title>
+	<meta name="title" content="Tulana | AI Spending versus World Budgets & Megaprojects" />
+	<meta name="description" content="An interactive visualization of 2026 AI CapEx projections. Compare Big Tech infrastructure spending against 100+ national budgets and historic human projects" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://tulana.thatshubham.com" />
+	<meta property="og:title" content="Tulana | The Scale of AI Spending" />
+	<meta property="og:description" content="Visualize how AI spending compares to the Apollo Program, National Defense and Global Budgets" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://tulana.thatshubham.com" />
+	<meta property="twitter:title" content="Tulana | The Scale of AI Spending" />
+	<meta property="twitter:description" content="Visualize how AI spending compares to the Apollo Program, National Defense and Global Budgets" />
+</svelte:head>
+
+<script>  
 	import { techData, countryData } from '$lib/data';
 	import { spring } from 'svelte/motion';
 	import { domToPng } from 'modern-screenshot';
