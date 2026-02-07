@@ -35,12 +35,14 @@ export const countryData = [
 	{
 		name: 'Global Coffee Market (Value)',
 		budget: 285e9,
-		type: 'Historic'
+		type: 'Historic',
+		isCommodity: true
 	},
 	{
 		name: 'Global Video Game Market (Value)',
 		budget: 560e9,
-		type: 'Historic'
+		type: 'Historic',
+		isCommodity: true
 	},
 
 	{
@@ -94,14 +96,14 @@ export const countryData = [
 		/* https://news.un.org/en/story/2025/11/1166397 */ type: 'Global Goal'
 	},
 	{
-		name: 'Universal Access to Safe Water & Sanitation (yearly budget)',
+		name: 'Universal Access to Safe Water & Sanitation',
 		budget: 140e9,
 		type: 'Global Goal'
 	},
 
 	// INFRA
-	{ name: '3nm Chip Fab (Single Plant)', budget: 20e9, type: 'Infrastructure' },
-	{ name: 'CERN Operating Budget (Yearly)', budget: 1.5e9, type: 'Infrastructure' },
+	{ name: '3nm Chip Fab (Single Plant)', budget: 20e9, type: 'infrastructure'},
+	{ name: 'CERN Operating Budget', budget: 1.5e9, type: 'Global Goal' },
 
 	// COUNTRIES BUDGETS EXPENDITURES
 	{

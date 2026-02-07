@@ -35,8 +35,9 @@
 
 	$: ratio = selectedTech.spend / selectedCountry.budget; // calculate ratio
 	$: isHistorical = selectedCountry.isInflationAdjusted;
+	$: isCommodity = selectedCountry.isCommodity;
 	$: comparisonVerb = ratio >= 1 ? "exceeds" : "represents";
-	$: multiplierText = ratio >= 1 ? `${ratio.toFixed(1)}x the size of` : `${Math.round(ratio * 100)}% of`;
+	$: multiplierText = ratio >= 1 ? `${ratio.toFixed(1)}x` : `${Math.round(ratio * 100)}% of`;
 
 	const displayVal = spring(0, { stiffness: 0.1, damping: 0.6 });
 	$: displayVal.set((selectedTech.spend / selectedCountry.budget) * 100);
@@ -112,7 +113,7 @@
 						AI spend
 						<span class="font-normal italic opacity-60">{comparisonVerb}</span>
 						<span class="mt-1 font-black">{multiplierText}</span>
-						<span class="opacity-80">the {isHistorical ? 'inflation adjusted' : 'annual'} budget of {selectedCountry.name}.</span>
+						<span class="opacity-80">the {isHistorical ? 'inflation adjusted' : 'annual'} {isCommodity ? 'value' : 'budget'} of {selectedCountry.name}.</span>
 					</div>
 
 					<div class="mt-12 w-48 h-1.5 bg-black/5 dark:bg-white/10 rounded-full overflow-hidden">
