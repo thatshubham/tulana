@@ -82,14 +82,14 @@
 			
 		
 			<div class="lg:col-span-3 space-y-3">
-				<p class="text-[10px] font-black opacity-40 uppercase tracking-widest mb-4 flex items-center gap-2"><Building2 size={12}/> AI CapEx Projection</p>
+				<p class="text-[10px] font-black opacity-40 uppercase tracking-widest mb-4 flex items-center gap-2"><Building2 size={12}/> AI CapEx Projection for 2026</p>
 				{#each techData as tech}
 					<button 
 						on:click={() => selectedTech = tech}
 						class="w-full p-4 rounded-3xl border text-left transition-all 
 						{selectedTech.id === tech.id ? 'bg-indigo-700 text-white border-indigo-700 shadow-xl scale-[1.02]' : 'bg-black/5 dark:bg-white/5 border-transparent hover:border-black/10'}">
 						<span class="text-[10px] font-bold opacity-60 uppercase">{tech.name}</span>
-						<span class="block text-xl font-black">${(tech.spend/1e9).toFixed(0)}Billion</span>
+						<span class="block text-xl font-black">${(tech.spend/1e9).toFixed(0)} <!--  -->Billion</span>
 					</button>
 				{/each}
 			</div>
@@ -129,13 +129,13 @@
 				<p class="text-[10px] font-black opacity-40 uppercase tracking-widest mb-4 flex items-center gap-2"><Globe size={12}/> Global Context</p>
 				<div class="relative mb-6">
 					<Search class="absolute left-4 top-1/2 -translate-y-1/2 opacity-30" size={16}/>
-					<input bind:value={searchQuery} placeholder="Search 100+ items..." class="w-full bg-black/5 dark:bg-white/5 border border-transparent focus:border-indigo-700 rounded-2xl py-4 pl-12 pr-4 text-sm outline-none transition-all" />
+					<input bind:value={searchQuery} placeholder="Search items..." class="w-full bg-black/5 dark:bg-white/5 border border-transparent focus:border-indigo-700 rounded-2xl py-4 pl-12 pr-4 text-sm outline-none transition-all" />
 				</div>
 				
 				<div class="overflow-y-auto space-y-1 pr-2 custom-scroll">
 					{#each categories as category}
 						{#if filtered.some(c => c.type === category)}
-							<div class="bg-sky-100/20 p-2  mb-4">
+							<div class="bg-orange-200/25 rounded-xl p-2  mb-4">
 								<h4 class="py-2 text-[10px] font-black text-indigo-600/60 uppercase tracking-widest mb-3 px-2">{category}</h4>
 								<div class="space-y-2">
 									{#each filtered.filter(c => c.type === category) as country}
