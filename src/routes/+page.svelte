@@ -49,7 +49,7 @@
                     <a href="https://thatshubham.com" target="_blank" class="text-gray-600 text-2xl font-bold italic tracking-tighter hover:underline">thatshubham</a>
 			</div>
             <div class="flex items-center gap-2">
-                <a href="https://github.com/thatshubham" target="_blank" class="text-gray-600 text-sm font-base italic tracking-tighter hover:underline">github</a>
+                <a href="https://github.com/thatshubham/tulana" target="_blank" class="text-gray-600 text-sm font-base italic tracking-tighter hover:underline">github</a>
                  <span class="text-sm font-base italic tracking-tighter">|</span>
 
                 <span class="text-sm font-base italic tracking-tighter">Toggle dark mode for comparison</span>
