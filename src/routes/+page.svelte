@@ -56,7 +56,7 @@
 	<main class="min-h-screen bg-orange-100/50  text-[#1D1B20]  transition-all p-4 md:p-8 font-sans">
 		
 		
-		<nav class="max-w-7xl mx-auto flex justify-between items-center mb-10 border-b pb-4 border-gray-300">
+		<nav class="max-w-7xl mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center mb-10 border-b pb-4 border-gray-300">
 			<div class="flex items-baseline gap-2">
 				<div class="w-10 h-10 rounded-2xl bg-indigo-700 text-white flex items-center justify-center font-black shadow-xl">T</div>
 				<h1 class="text-2xl font-black italic tracking-tighter uppercase">Tulana</h1>
@@ -101,7 +101,7 @@
 					class="w-full aspect-square rounded-[64px] p-12 flex flex-col items-center justify-center text-center relative overflow-hidden transition-colors
 					{isDarkMode ? 'bg-[#111] border text-white border-white/10' : 'bg-white border border-black/5 shadow-2xl shadow-purple-900/5'}">
 					
-					<div class="absolute top-12 left-12 opacity-30 font-black text-xs tracking-[0.4em]">TULANA</div>
+					<div class="absolute top-6 left-6 md:top-12 md:left-12 opacity-30 font-black text-xs tracking-[0.4em]">TULANA</div>
 
 					<div class="font-black tracking-tighter tabular-nums leading-[0.85] text-center" style="font-size: {dynamicFontSize}">
 						{Math.round($displayVal).toLocaleString()}<span class="opacity-20 text-[0.4em] ml-1">%</span>
@@ -111,7 +111,7 @@
 						<span style="color: {selectedTech.color}">{selectedTech.name}'s</span>
 						AI spend
 						<span class="font-normal italic opacity-60">{comparisonVerb}</span>
-						<span class="mt-2 block text-4xl font-black">{multiplierText}</span>
+						<span class="mt-1 font-black">{multiplierText}</span>
 						<span class="opacity-80">the {isHistorical ? 'inflation adjusted' : 'annual'} budget of {selectedCountry.name}.</span>
 					</div>
 
