@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --md-sys-color-primary: #6750A4;
+    --md-sys-color-surface: #FEF7FF;
+    --md-sys-color-on-surface: #1D1B20;
+    --transition-speed: 200ms;
+}
+
+body {
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Senior Engineer Marvel: Hardware accelerated transitions */
+.gpu-render {
+    transform: translateZ(0);
+    will-change: transform, width;
+}
+
+/* Material 3 Card Style */
+.m3-card {
+    @apply rounded-[28px] p-6 transition-all duration-300 ease-out;
+    background: color-mix(in srgb, var(--md-sys-color-surface), black 3%);
+}
+
+.m3-card:hover {
+    @apply shadow-lg scale-[1.01];
+}
+
+span, div {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
