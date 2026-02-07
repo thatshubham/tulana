@@ -1,42 +1,30 @@
-# sv
+> **Tulana** (Hindi: तुलना) — *The act of comparing; to weigh or balance*
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Tulana is meant to showcase neutral data visualization, it is designed to provide an economic scale to the unprecedented capital expenditure (CapEx) currently flowing into artificial intelligence by the big tech. 
 
-## Creating a project
+The goal is simply to map the projected 2026 big tech AI spending against national budgets, departmental allocations of big countries and inflation-adjusted historic megaprojects (like the Apollo Program or ending food insecurity). The platform itself does not argue for or against AI, it merely visualizes the math.
 
-If you're seeing this, you've probably already done this step. Congrats!
 
-```sh
-# create a new project
-npx sv create my-app
-```
 
-To recreate this project with the same configuration:
+## The how
+This project is built using the following:
+- SvelteKit (SSG) and served from the Cloudflare global edge.
+- Utilizes the simple design system with dynamic light/dark mode for the visualization card.
+- Integrated export engine to download social-ready PNG comparison assets.
 
-```sh
-# recreate this project
-npx sv create --template minimal --types jsdoc --add prettier eslint tailwindcss="plugins:none" --install npm ./
-```
 
-## Developing
+## Contributions welcome
+Tulana aims to rely on high-quality, sourced data. I welcome contributions for national budgets, specific departmental spends (eg, Space, Defense, Education), or historic infrastructure projects. With sources is always better. If you find an error in the numbers, feel free to point that out as well.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Where to find the data:
+1. Open `src/lib/data.js`.
+2. Add your entry to the `countryData` array.
 
-```sh
-npm run dev
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+---
 
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Where is it deployed?
+This site is configured for **Cloudflare Pages**. 
+- Built using `@sveltejs/adapter-static`.
+- Deployments are triggered automatically on push to `main`.
+- The caching is handled via Cloudflare's Edge Network.
