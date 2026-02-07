@@ -25,6 +25,41 @@ export const countryData = [
 		isInflationAdjusted: true
 	},
 
+	{
+		name: 'USA Interstate Highway System (Total Build Cost)',
+		budget: 634e9,
+		type: 'Historic',
+		isInflationAdjusted: true
+	},
+
+	{
+		name: 'Kashagan Oil Field - The most expensive offshore oil project',
+		budget: 116e9,
+		type: 'Historic',
+		isInflationAdjusted: true
+	},
+		{
+		name: 'Rio Olympic Games (Summer 2016)',
+		budget: 20e9,
+		type: 'Historic',
+		isInflationAdjusted: true
+	},
+		{
+		name: 'FIFA World Cup in Qatar (2022)',
+		budget: 220e9,
+		type: 'Historic',
+		isInflationAdjusted: true
+	},
+
+
+	{
+		name: 'Panama Canal (Construction)',
+		budget: 15e9,
+		type: 'Historic',
+		isInflationAdjusted: true
+	},
+
+
 	// NATIONAL DEPARTMENTS
 	{
 		name: 'USA: Military (2026)',
