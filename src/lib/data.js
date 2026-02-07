@@ -36,7 +36,7 @@ export const countryData = [
 		budget: 542e9 /* https://www.lowyinstitute.org/the-interpreter/solving-puzzle-china-s-defence-spending */,
 		type: 'Department'
 	},
-	{ name: 'India: Military', budget: 86e9, type: 'Department' },
+	{ name: 'India: Military (2026)', budget: 86e9, type: 'Department' },
 
 	// GLOBAL GOALS (to put it in perspective)
 	{
@@ -50,10 +50,9 @@ export const countryData = [
 		/* https://news.un.org/en/story/2025/11/1166397 */ type: 'Global Goal'
 	},
 
-
-    // INFRA
+	// INFRA
 	{ name: '3nm Chip Fab (Single Plant)', budget: 20e9, type: 'Infrastructure' },
-    { name: 'CERN Operating Budget (Yearly)', budget: 1.5e9, type: 'Infrastructure' },
+	{ name: 'CERN Operating Budget (Yearly)', budget: 1.5e9, type: 'Infrastructure' },
 
 	// COUNTRIES BUDGETS EXPENDITURES
 	{
@@ -76,5 +75,97 @@ export const countryData = [
 		name: 'UK',
 		budget: 1900e9,
 		type: 'Country (Budget Expenditure)'
-	} /* https://en.wikipedia.org/wiki/Budget_of_the_United_Kingdom#List_of_budgets */
+	} /* https://en.wikipedia.org/wiki/Budget_of_the_United_Kingdom#List_of_budgets */,
+	{
+		name: 'China',
+		budget: 6100e9 /* https://en.wikipedia.org/wiki/List_of_countries_by_government_budget onwards */,
+		type: 'Country (Budget Expenditure)'
+	},
+	{
+		name: 'Russia',
+		budget: 815e9,
+		type: 'Country (Budget Expenditure)'
+	},
+	{
+		name: 'Brazil',
+		budget: 1200e9,
+		type: 'Country (Budget Expenditure)'
+	},
+	{
+		name: 'Canada',
+		budget: 420e9,
+		type: 'Country (Budget Expenditure)'
+	},
+	{
+		name: 'Spain',
+		budget: 215e9,
+		type: 'Country (Budget Expenditure)'
+	},
+	{
+		name: 'Australia',
+		budget: 500e9,
+		type: 'Country (Budget Expenditure)'
+	},
+	{
+		name: 'Mexico',
+		budget: 547e9,
+		type: 'Country (Budget Expenditure)'
+	},
+	{
+		name: 'Turkey',
+		budget: 452e9,
+		type: 'Country (Budget Expenditure)'
+	},
+	{
+		name: 'South Korea',
+		budget: 498e9,
+		type: 'Country (Budget Expenditure)'
+	},
+	,
+	{
+		name: 'Poland',
+		budget: 224e9,
+		type: 'Country (Budget Expenditure)'
+	},
+
+	{
+		name: 'Belgium',
+		budget: 200e9,
+		type: 'Country (Budget Expenditure)'
+	},
+	{
+		name: 'Saudi Arabia',
+		budget: 350e9,
+		type: 'Country (Budget Expenditure)'
+	},
+	{
+		name: 'Switzerland',
+		budget: 107e9,
+		type: 'Country (Budget Expenditure)'
+	},
+    {
+		name: 'Sweden',
+		budget: 164e9,
+		type: 'Country (Budget Expenditure)'
+	},
+    {
+		name: 'Austria',
+		budget: 123e9,
+		type: 'Country (Budget Expenditure)'
+	},
+    {
+		name: 'Indonesia',
+		budget: 236e9,
+		type: 'Country (Budget Expenditure)'
+	},
+    {
+		name: 'Norway',
+		budget: 200e9,
+		type: 'Country (Budget Expenditure)'
+	},
+    {
+		name: 'India',
+		budget: 650e9,
+		type: 'Country (Budget Expenditure)'
+	}
 ];
