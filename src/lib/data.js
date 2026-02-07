@@ -1,6 +1,10 @@
 const individualTech = [
     { id: 'msft', name: 'Microsoft', spend: 115e9, color: '#00A4EF' },
-    { id: 'goog', name: 'Alphabet', spend: 82e9, color: '#EA4335' },
+    { id: 'goog', name: 'Alphabet', spend: 185e9, color: '#EA4335' },
+        { id: 'amzn', name: 'Amazon', spend: 200e9, color: '#FF9900' },
+          { id: 'meta', name: 'Meta', spend: 115e9, color: '#0668E1' },
+             { id: 'orcl', name: 'Oracle', spend: 50e9, color: '#585858' },
+                 { id: 'openai', name: 'Open AI', spend: 45e9, color: '#76B900' },
 ];
 
 const techSum = individualTech.reduce((acc, curr) => acc + curr.spend, 0);

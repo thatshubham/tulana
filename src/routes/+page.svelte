@@ -142,7 +142,7 @@
 										<button 
 											on:click={() => selectedCountry = country}
 											class="w-full px-4 py-0 rounded-lg border transition-all text-left
-											{selectedCountry.name === country.name ? 'bg-white dark:bg-zinc-800 border-indigo-700 shadow-md' : 'bg-transparent border-transparent hover:bg-black/5 dark:hover:bg-white/5'}">
+											{selectedCountry.name === country.name ? 'bg-white border-indigo-700 shadow-md' : 'bg-transparent border-transparent hover:bg-black/5'}">
 											<span class="font-bold text-sm block truncate">{country.name}</span>
 											<span class="text-xs opacity-40 font-mono tracking-tighter">${(country.budget/1e9).toFixed(1)}B</span>
 										</button>
