@@ -16,59 +16,70 @@ export const techData = [
 
 export const countryData = [
 	// HISTORIC PROJECTS (inflation adjusted?)
-	{ name: 'Apollo Program (USA)', budget: 257e9, type: 'Historic', isInflationAdjusted: true },
+	{ name: 'Apollo Program (USA)', budget: 257e9, 
+		type: 'Historic', afterVerb: 'inflation adjusted' },
 
 	{
-		name: 'ISS (Total Build Cost)',
+		name: 'International Space Station',
 		budget: 150e9 /* https://en.wikipedia.org/wiki/International_Space_Station_program#Cost */,
 		type: 'Historic',
-		isInflationAdjusted: true
+		/* isInflationAdjusted: true, */
+		afterVerb: 'inflation adjusted'
+
 	},
 
 	{
-		name: 'USA Interstate Highway System (Total Build Cost)',
+		name: 'USA Interstate Highway System',
 		budget: 634e9,
 		type: 'Historic',
-		isInflationAdjusted: true
-	},
-
-	{
-		name: 'Global Coffee Market (Value)',
-		budget: 285e9,
-		type: 'Historic',
-		isCommodity: true
-	},
-	{
-		name: 'Global Video Game Market (Value)',
-		budget: 560e9,
-		type: 'Historic',
-		isCommodity: true
-	},
-
-	{
-		name: 'Kashagan Oil Field - The most expensive offshore oil project',
-		budget: 116e9,
-		type: 'Historic',
-		isInflationAdjusted: true
-	},
-	{
-		name: 'Rio Olympic Games (Summer 2016)',
-		budget: 20e9,
-		type: 'Historic',
-		isInflationAdjusted: true
-	},
-	{
-		name: 'FIFA World Cup in Qatar (2022)',
-		budget: 220e9,
-		type: 'Historic',
-		isInflationAdjusted: true
+		/* isInflationAdjusted: true */
+		afterVerb: 'inflation adjusted'
 	},
 
 	{
 		name: 'Panama Canal (Construction)',
 		budget: 15e9,
 		type: 'Historic',
-		isInflationAdjusted: true
+		/* isInflationAdjusted: true */
+		afterVerb: 'inflation adjusted'
+	},
+
+	{
+		name: 'Kashagan Oil Field - The most expensive offshore oil project',
+		budget: 116e9,
+		type: 'Historic',
+		/* isInflationAdjusted: true */
+		afterVerb: 'inflation adjusted'
+	},
+
+	// EVENT
+	{
+		name: 'Rio Olympic Games (Summer 2016)',
+		budget: 20e9,
+		type: 'Event',
+		afterVerb: 'total'
+	},
+	{
+		name: 'FIFA World Cup in Qatar (2022)',
+		budget: 220e9,
+		type: 'Event',
+		afterVerb: 'total'
+	},
+
+	// TRADE
+	{
+		name: 'Coffee Market',
+		budget: 285e9,
+		type: 'Trade',
+		isCommodity: true,
+		afterVerb: 'global'
+	},
+	{
+		name: 'Video Game Market',
+		budget: 560e9,
+		type: 'Trade',
+		isCommodity: true
+		,afterVerb: 'global'
 	},
 
 	// NATIONAL DEPARTMENTS
@@ -86,14 +97,15 @@ export const countryData = [
 
 	// GLOBAL GOALS (to put it in perspective)
 	{
-		name: 'End Global Malaria (Total)',
+		name: 'Ending Global Malaria',
 		budget: 120e9,
 		type: 'Global Goal'
 	} /* https://share.google/aimode/aHuC6tbbnT0qG6iKl */,
 	{
-		name: 'End World Hunger (Yearly)',
+		name: 'Ending World Hunger',
 		budget: 93e9,
 		/* https://news.un.org/en/story/2025/11/1166397 */ type: 'Global Goal'
+		,afterVerb: 'annual'
 	},
 	{
 		name: 'Universal Access to Safe Water & Sanitation',
@@ -102,8 +114,8 @@ export const countryData = [
 	},
 
 	// INFRA
-	{ name: '3nm Chip Fab (Single Plant)', budget: 20e9, type: 'infrastructure'},
-	{ name: 'CERN Operating Budget', budget: 1.5e9, type: 'Global Goal' },
+	{ name: '3nm Chip Fab (Single Plant)', budget: 20e9, type: 'infrastructure',afterVerb: 'annual' },
+	{ name: 'CERN Operating Budget', budget: 1.5e9, type: 'Global Goal',afterVerb: 'annual' },
 
 	// COUNTRIES BUDGETS EXPENDITURES
 	{

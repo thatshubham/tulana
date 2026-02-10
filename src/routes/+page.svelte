@@ -15,7 +15,9 @@
 	<meta property="twitter:description" content="Visualize how AI spending compares to the Apollo Program, National Defense and Global Budgets" />
 </svelte:head>
 
-<script>  
+<script>
+// @ts-nocheck
+  
 	import { techData, countryData } from '$lib/data';
 	import { spring } from 'svelte/motion';
 	import { domToPng } from 'modern-screenshot';
@@ -36,8 +38,9 @@
 	$: ratio = selectedTech.spend / selectedCountry.budget; // calculate ratio
 	$: isHistorical = selectedCountry.isInflationAdjusted;
 	$: isCommodity = selectedCountry.isCommodity;
+	$: afterVerb = selectedCountry.afterVerb;
 	$: comparisonVerb = ratio >= 1 ? "exceeds" : "represents";
-	$: multiplierText = ratio >= 1 ? `${ratio.toFixed(1)}x` : `${Math.round(ratio * 100)}% of`;
+	$: multiplierText = ratio >= 1 ? `${ratio.toFixed(1)}x the` : `${Math.round(ratio * 100)}% of`;
 
 	const displayVal = spring(0, { stiffness: 0.1, damping: 0.6 });
 	$: displayVal.set((selectedTech.spend / selectedCountry.budget) * 100);
@@ -51,6 +54,7 @@
 		link.href = dataUrl;
 		link.click();
 	}
+	
 </script>
 
 <div class={isDarkMode ? 'dark' : ''}>
@@ -113,7 +117,12 @@
 						AI spend
 						<span class="font-normal italic opacity-60">{comparisonVerb}</span>
 						<span class="mt-1 font-black">{multiplierText}</span>
-						<span class="opacity-80">the {isHistorical ? 'inflation adjusted' : 'annual'} {isCommodity ? 'value' : 'budget'} of {selectedCountry.name}.</span>
+						<span class="opacity-80">{afterVerb}
+							</span>
+						<span>
+							{isCommodity ? 'value' : 'budget expenditure'} of <br>	</span>
+							
+							<span class="text-orange-700">{selectedCountry.name}.</span>
 					</div>
 
 					<div class="mt-12 w-48 h-1.5 bg-black/5 dark:bg-white/10 rounded-full overflow-hidden">
