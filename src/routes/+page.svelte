@@ -94,7 +94,7 @@
 						class="w-full p-4 rounded-3xl border text-left transition-all 
 						{selectedTech.id === tech.id ? 'bg-indigo-700 text-white border-indigo-700 shadow-xl scale-[1.02]' : 'bg-black/5 dark:bg-white/5 border-transparent hover:border-black/10'}">
 						<span class="text-[10px] font-bold opacity-60 uppercase">{tech.name}</span>
-						<span class="block text-xl font-black">${(tech.spend/1e9).toFixed(0)} <!--  -->Billion</span>
+						<span class="block text-xl font-black">${(tech.spend/1e9).toFixed(0)}B</span>
 					</button>
 				{/each}
 			</div>
@@ -145,16 +145,16 @@
 				<div class="overflow-y-auto space-y-1 pr-2 custom-scroll">
 					{#each categories as category}
 						{#if filtered.some(c => c.type === category)}
-							<div class="bg-orange-200/25 rounded-xl p-2  mb-4">
+							<div class="bg-orange-200/25 rounded-xl p-2 mb-4">
 								<h4 class="py-2 text-[10px] font-black text-indigo-600/60 uppercase tracking-widest mb-3 px-2">{category}</h4>
-								<div class="space-y-2">
+								<div class="space-y-6">
 									{#each filtered.filter(c => c.type === category) as country}
-										<button 
+										<button title={country.name}
 											on:click={() => selectedCountry = country}
-											class="w-full px-4 py-0 rounded-lg border transition-all text-left
-											{selectedCountry.name === country.name ? 'bg-white border-indigo-700 shadow-md' : 'bg-transparent border-transparent hover:bg-black/5'}">
-											<span class="font-bold text-sm block truncate">{country.name}</span>
-											<span class="text-xs opacity-40 font-mono tracking-tighter">${(country.budget/1e9).toFixed(1)}B</span>
+											class="w-full px-4 py-2 rounded-lg border transition-all text-left
+											{selectedCountry.name === country.name ? 'text-xl bg-white border-indigo-300 shadow-md tracking-tight' : 'text-sm bg-transparent border-transparent hover:bg-black/5'}">
+											<span class="font-bold block truncate">{country.name}</span>
+											<span class="text-xs opacity-75 font-mono tracking-tighter">${(country.budget/1e9).toFixed(1)}B</span>
 										</button>
 									{/each}
 								</div>
